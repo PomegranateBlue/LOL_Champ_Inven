@@ -3,4 +3,5 @@ export async function getChampions() {
     "https://ddragon.leagueoflegends.com/cdn/15.5.1/data/ko_KR/champion.json"
   );
   const data = await response.json();
+  return Object.values(data.data);
 }
