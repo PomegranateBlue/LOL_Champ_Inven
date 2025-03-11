@@ -4,13 +4,20 @@ const cards = [
     src: "/images/champion.jpg",
     alt: "champion image",
     text: "챔피언 목록 보기",
+    href: "/champions",
+  },
+  {
+    src: "/images/items.jpg",
+    alt: "item image",
+    text: "아이템 목록 보기",
+    href: "/items",
   },
   {
     src: "/images/rotation.jpg",
     alt: "rotation image",
     text: "금주 로테이션 확인",
+    href: "/rotation",
   },
-  { src: "/images/items.jpg", alt: "item image", text: "아이템 목록 보기" },
 ];
 
 export default function HomePage() {
@@ -23,7 +30,13 @@ export default function HomePage() {
 
       <div className="flex justify-around gap-x-20 mt-20">
         {cards.map((card, index) => (
-          <Card key={index} src={card.src} alt={card.alt} text={card.text} />
+          <Card
+            key={index}
+            src={card.src}
+            alt={card.alt}
+            text={card.text}
+            href={card.href}
+          />
         ))}
       </div>
     </div>
