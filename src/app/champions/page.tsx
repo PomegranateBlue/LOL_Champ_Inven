@@ -1,9 +1,9 @@
 import { getChampions } from "@/lib/api";
 import ChampionCard from "@/components/ChampionCard";
-import { ChampionCardInterface } from "@/types/championCardType";
+import { Champion } from "@/types/apiType";
 export default async function ChampionPage() {
-  const championData = await getChampions();
-  console.log(championData);
+  const championData: Champion[] = await getChampions();
+  // console.log(championData);
   return (
     <div>
       <h2 className="font-bold text-red-500">챔피언 목록</h2>
@@ -14,7 +14,6 @@ export default async function ChampionPage() {
             id={champion.id}
             name={champion.name}
             title={champion.title}
-            sprite={champion.image.sprite}
           />
         ))}
       </div>
