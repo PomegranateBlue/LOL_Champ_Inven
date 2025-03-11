@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ChampionCardInterface } from "@/types/championCardType";
-import { getSpriteUrl } from "@/utils/getImage";
 export default function ChampionCard({
   id,
   name,
@@ -9,15 +8,15 @@ export default function ChampionCard({
 }: ChampionCardInterface) {
   return (
     <Link href={`/champions/${id}`}>
-      <div className="rounded-md">
+      <div className="flex flex-col items-center  border-white border-[1px] ">
         <Image
           src={`https://ddragon.leagueoflegends.com/cdn/15.5.1/img/champion/${id}.png`}
-          width={60}
-          height={60}
+          width={120}
+          height={120}
           alt={name}
         />
-        <div>{name}</div>
-        <div>{title}</div>
+        <div className="font-bold text-2xl text-red-500">{name}</div>
+        <div className="font-semibold text-md">{title}</div>
       </div>
     </Link>
   );
