@@ -15,7 +15,7 @@ export default function Navigation() {
           </Link>
         </li>
         <li>
-          <Link href="/" className="hover:text-red-500">
+          <Link href="/items" className="hover:text-red-500">
             아이템 목록
           </Link>
         </li>
