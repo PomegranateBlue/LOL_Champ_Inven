@@ -3,3 +3,4 @@ export interface ChampionCardInterface {
   name: string;
   title: string;
 }
+
