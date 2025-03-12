@@ -15,7 +15,7 @@ export async function fetchChampionListData(): Promise<ChampionList[]> {
 
 export async function fetchChampionDetailData(
   id: string
-): Promise<ChampionDetailInterface[]> {
+): Promise<ChampionDetailInterface> {
   const response = await fetch(API_URL, { cache: "no-store" });
 
   if (!response) {
@@ -23,5 +23,5 @@ export async function fetchChampionDetailData(
   }
 
   const data = await response.json();
-  return data.data[id] as ChampionDetailInterface[];
+  return data.data[id] as ChampionDetailInterface;
 }

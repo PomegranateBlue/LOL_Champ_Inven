@@ -10,7 +10,7 @@ export default function Navigation() {
           </Link>
         </li>
         <li>
-          <Link href="/" className="hover:text-red-500">
+          <Link href="/champions" className="hover:text-red-500">
             챔피언 목록
           </Link>
         </li>

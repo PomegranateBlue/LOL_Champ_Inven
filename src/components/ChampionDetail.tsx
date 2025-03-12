@@ -5,7 +5,7 @@ export default function ChampionDetailComponent({
   id,
   name,
   title,
-  lore,
+  blurb,
 }: ChampionDetailInterface) {
   return (
     <div>
@@ -17,7 +17,7 @@ export default function ChampionDetailComponent({
         height={120}
         alt={name}
       />
-      <div>{lore}</div>
+      <div>{blurb}</div>
     </div>
   );
 }
