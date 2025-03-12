@@ -1,12 +1,6 @@
-export interface ChampionDetailInterface {
-  id: string;
-  name: string;
-  title: string;
-  image: {
-    full: string;
-    sprite: string;
-  };
-  info: string;
-  blurb: string;
-  tags: string[];
+import { ChampionList } from "./apiType";
+
+export interface ChampionDetailInterface extends ChampionList {
+  lore: string;
+  enemytips: string[];
 }

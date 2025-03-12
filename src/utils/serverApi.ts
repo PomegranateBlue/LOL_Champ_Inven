@@ -1,5 +1,5 @@
-import { ChampionList, ChampionDetail, DataInterface } from "@/types/apiType";
-
+import { ChampionList, DataInterface } from "@/types/apiType";
+import { ChampionDetailInterface } from "@/types/championDetailType";
 const API_URL =
   "https://ddragon.leagueoflegends.com/cdn/15.5.1/data/ko_KR/champion.json";
 export async function fetchChampionListData(): Promise<ChampionList[]> {
@@ -13,7 +13,9 @@ export async function fetchChampionListData(): Promise<ChampionList[]> {
   return Object.values(data.data);
 }
 
-export async function fetchChampionDetailData(): Promise<ChampionDetail[]> {
+export async function fetchChampionDetailData(
+  id: string
+): Promise<ChampionDetailInterface[]> {
   const response = await fetch(API_URL, { cache: "no-store" });
 
   if (!response) {
@@ -21,5 +23,5 @@ export async function fetchChampionDetailData(): Promise<ChampionDetail[]> {
   }
 
   const data = await response.json();
-  return data.data[id];
+  return data.data[id] as ChampionDetailInterface[];
 }
