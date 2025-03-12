@@ -25,3 +25,8 @@ export async function fetchChampionDetailData(
   const data = await response.json();
   return data.data[id] as ChampionDetailInterface;
 }
+
+
+export async function fetchItemsData(){
+    
+}
