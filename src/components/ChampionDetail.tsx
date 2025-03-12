@@ -1,7 +1,7 @@
 // import { getChampions } from "@/lib/api";
 import { ChampionDetailInterface } from "@/types/championDetailType";
 import Image from "next/image";
-export default function ChampionDetail({
+export default function ChampionDetailComponent({
   id,
   name,
   title,
