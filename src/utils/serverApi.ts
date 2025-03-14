@@ -4,7 +4,7 @@ import {
   ItemDataInterface,
 } from "@/types/apiType";
 import { ChampionDetailInterface } from "@/types/championDetailType";
-import { ItemListInterface } from "@/types/itemType";
+import { ItemListInterface, ItemProps } from "@/types/itemType";
 const CHAMPION_API_URL =
   "https://ddragon.leagueoflegends.com/cdn/15.5.1/data/ko_KR/champion.json";
 
@@ -28,6 +28,7 @@ export async function fetchChampionListData(): Promise<ChampionList[]> {
 export async function fetchChampionDetailData(
   id: string
 ): Promise<ChampionDetailInterface> {
+  console.log("API 호출 시간:", new Date().toISOString());
   const response = await fetch(CHAMPION_API_URL, { cache: "no-store" });
 
   if (!response) {
@@ -38,7 +39,7 @@ export async function fetchChampionDetailData(
   return data.data[id] as ChampionDetailInterface;
 }
 
-export async function fetchItemsListData(): Promise<ItemListInterface[]> {
+export async function fetchItemsListData(): Promise<ItemProps[]> {
   const response = await fetch(ITEM_API_URL, {
     next: { revalidate: ONE_DAY_TO_SECONDS },
   });
@@ -48,5 +49,5 @@ export async function fetchItemsListData(): Promise<ItemListInterface[]> {
   }
 
   const data: ItemDataInterface = await response.json();
-  return Object.values(data.data);
+  return Object.entries(data.data) as ItemProps[];
 }
