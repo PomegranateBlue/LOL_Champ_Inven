@@ -1,5 +1,5 @@
 import { fetchChampionDetailData } from "@/utils/serverApi";
-import { ChampionDetailInterface } from "@/types/championDetailType";
+import { ChampionDetail } from "@/types/championType";
 import ChampionDetailComponent from "@/components/ChampionDetail";
 interface ChampionIdParams {
   params: { id: string };
@@ -7,7 +7,6 @@ interface ChampionIdParams {
 
 export default async function ChampionDetailPage({ params }: ChampionIdParams) {
   const { id } = params;
-  const championDetailData: ChampionDetailInterface =
-    await fetchChampionDetailData(id);
+  const championDetailData: ChampionDetail = await fetchChampionDetailData(id);
   return <ChampionDetailComponent {...championDetailData} />;
 }
