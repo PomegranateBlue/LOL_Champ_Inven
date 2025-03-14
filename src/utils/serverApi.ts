@@ -1,6 +1,6 @@
-import { Champion, ChampionData, ChampionDetail } from "@/types/championType";
+import { Champion, ChampionDetail } from "@/types/championType";
 import { Item, ItemData } from "@/types/itemType";
-// import { RIOT_URL } from "@/constants/apiURL";
+
 const CHAMPION_API_URL =
   "https://ddragon.leagueoflegends.com/cdn/15.5.1/data/ko_KR/champion.json";
 
@@ -8,6 +8,7 @@ const ITEM_API_URL =
   "https://ddragon.leagueoflegends.com/cdn/15.5.1/data/ko_KR/item.json";
 
 const ONE_DAY_TO_SECONDS = 86400;
+
 export async function fetchChampionListData(): Promise<Champion[]> {
   const response = await fetch(CHAMPION_API_URL, {
     next: { revalidate: ONE_DAY_TO_SECONDS },
@@ -17,8 +18,8 @@ export async function fetchChampionListData(): Promise<Champion[]> {
     throw new Error("챔피언 데이터 로드 실패!");
   }
 
-  const data: ChampionData = await response.json();
-  return Object.values(data.data);
+  const { data }: { data: Record<string, Champion> } = await response.json();
+  return Object.values(data);
 }
 export async function fetchChampionDetailData(
   id: string

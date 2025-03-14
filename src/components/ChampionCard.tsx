@@ -13,6 +13,7 @@ export default function ChampionCard({ champion }: ChampionCardProps) {
     >
       <Link href={`/champions/${champion.id}`}>
         <Image
+          priority
           src={`${RIOT_URL.CHAMPION_IMAGE}/${champion.image.full}`}
           alt={champion.name}
           width={120}
@@ -22,7 +23,7 @@ export default function ChampionCard({ champion }: ChampionCardProps) {
         <div className="mt-2 text-xl font-bold text-red-400">
           {champion.name}
         </div>
-        <div className="text-sm text-gray-400">{champion.title}</div>
+        <div className="text-sm text-gray-400">{champion.name}</div>
       </Link>
     </div>
   );

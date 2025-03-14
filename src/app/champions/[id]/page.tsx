@@ -16,6 +16,7 @@ export default async function ChampionDetailPage({ params }: ChampionIdParams) {
       </h1>
       <h2 className="text-lg text-gray-400">{championDetailData.title}</h2>
       <Image
+        priority
         src={`${RIOT_URL.CHAMPION_SPLASH}/${championDetailData.id}_0.jpg`}
         width={500}
         height={300}
