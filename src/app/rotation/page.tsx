@@ -19,11 +19,13 @@ export default function RotationPage() {
   if (error) return <div>에러 발생</div>;
 
   return (
-    <div>
-      <div>로테이션 챔피언</div>
-      {championRotation?.map((champion) => (
-        <ChampionCard champion={champion} key={champion.id} />
-      ))}
+    <div className="container mx-auto p-4">
+      <div className="text-3xl font-bold text-center mb-8">로테이션 챔피언</div>
+      <div className="grid grid-cols-6  gap-2">
+        {championRotation?.map((champion) => (
+          <ChampionCard champion={champion} key={champion.id} />
+        ))}
+      </div>
     </div>
   );
 }
