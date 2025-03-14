@@ -1,7 +1,8 @@
 export interface ChampionData {
   [key: string]: Champion;
 }
-
+//챔피언 데이터 가지고 올 때 키-값으로 가져오기
+//가져온 데이터에서 타입 Champion으로 정의
 export interface Champion {
   version: Version;
   id: string;
