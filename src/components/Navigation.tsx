@@ -20,7 +20,7 @@ export default function Navigation() {
           </Link>
         </li>
         <li>
-          <Link href="/" className="hover:text-red-500">
+          <Link href="/rotation" className="hover:text-red-500">
             챔피언 로테이션
           </Link>
         </li>
