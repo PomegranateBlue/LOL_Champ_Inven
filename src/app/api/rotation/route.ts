@@ -1,5 +1,6 @@
 import { RIOT_URL } from "@/constants/apiURL";
 import { fetchChampionListData } from "@/utils/serverApi";
+import { NextResponse } from "next/server";
 
 export async function GET() {
   const rotationRes = await fetch(`${RIOT_URL.ROTATION_CHAMPIONS}`, {
@@ -9,7 +10,7 @@ export async function GET() {
   });
 
   if (!rotationRes.ok) {
-    return Response.json({ error: "로테이션 데이터 fetching error" });
+    return NextResponse.json({ error: "로테이션 데이터 fetching error" });
   }
 
   const championData = await fetchChampionListData();
@@ -21,5 +22,5 @@ export async function GET() {
     championData.find((champion) => Number(champion.key) === championId)
   );
 
-  return Response.json(rotationChampions);
+  return NextResponse.json(rotationChampions);
 }

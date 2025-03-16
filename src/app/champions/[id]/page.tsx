@@ -1,3 +1,5 @@
+"use server";
+
 import { fetchChampionDetailData } from "@/utils/serverApi";
 import { ChampionDetail } from "@/types/championType";
 import { RIOT_URL } from "@/constants/apiURL";
