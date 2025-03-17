@@ -9,14 +9,12 @@ import Loading from "./loading";
 export default function RotationPage() {
   const {
     data: championRotation,
-    isLoading,
+
     error,
   } = useQuery<Champion[], Error>({
     queryKey: ["championRotation"],
     queryFn: getChampionRotation,
-    suspense: true,
   });
-  console.log(championRotation);
 
   if (error) return <div>에러 발생</div>;
 
