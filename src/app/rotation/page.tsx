@@ -17,7 +17,8 @@ export default function RotationPage() {
   });
 
   if (error) return <div>에러 발생</div>;
-
+  console.log(championRotation);
+  console.log(error);
   return (
     <div className="container mx-auto p-4">
       <div className="text-3xl font-bold text-center mb-8">로테이션 챔피언</div>
