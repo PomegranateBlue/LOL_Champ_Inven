@@ -1,5 +1,8 @@
+import withBundleAnalyzer from "@next/bundle-analyzer";
 /** @type {import('next').NextConfig} */
+
 const nextConfig = {
+  reactStrictMode: false,
   images: {
     remotePatterns: [
       {
@@ -8,7 +11,10 @@ const nextConfig = {
         pathname: "/cdn/**",
       },
     ],
+    formats: ["image/avif", "image/webp"],
   },
 };
 
-export default nextConfig;
+export default process.env.ANALYZE === "true"
+  ? withBundleAnalyzer()(nextConfig)
+  : nextConfig;

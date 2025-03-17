@@ -1,8 +1,10 @@
 import { fetchItemsListData } from "@/utils/serverApi";
-import ItemCard from "@/components/ItemCard";
+// import ItemCard from "@/components/ItemCard";
+import dynamic from "next/dynamic";
 import { Item } from "@/types/itemType";
 export default async function ItemListPage() {
   const items: [string, Item][] = await fetchItemsListData();
+  const ItemCard = dynamic(() => import("@/components/ItemCard"));
   return (
     <div className="bg-gray-950 min-h-screen p-10">
       <h2 className="text-4xl font-extrabold text-center text-yellow-400 mb-8">
