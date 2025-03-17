@@ -14,7 +14,7 @@ export default function Card({
   return (
     <Link href={href}>
       <div className="flex flex-col items-center gap-y-6">
-        <Image src={src} width={400} height={400} alt={alt} />
+        <Image priority src={src} width={400} height={400} alt={alt} />
         <span className="text-yellow-500">{text}</span>
       </div>
     </Link>
