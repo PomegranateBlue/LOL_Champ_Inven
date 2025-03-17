@@ -14,6 +14,7 @@ export default function ItemCard({ item }: ItemCardProps) {
       className="p-4 bg-gray-800 rounded-lg shadow-md hover:scale-105 transition-transform"
     >
       <Image
+        priority
         src={`${RIOT_URL.ITEM_IMAGE}/${item[0]}.png`}
         alt="item"
         width={80}
