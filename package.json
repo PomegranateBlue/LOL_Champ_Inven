@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "server": "json-server --watch db.json --port 4000 --delay 1000"
+    "server": "json-server --watch db.json --port 4000 --delay 700"
   },
   "dependencies": {
     "@next/bundle-analyzer": "^15.2.2",
