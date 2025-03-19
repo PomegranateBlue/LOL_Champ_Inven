@@ -1,36 +1,23 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+ # 리그 오브 레전드 정보 조회 서비스
+## Riot Games API를 활용하여 리그 오브 레전드(LoL) 게임의 다양한 정보를 제공하는 웹 애플리케이션입니다.
 
-## Getting Started
+<p align="center"> <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white"/> <img src="https://img.shields.io/badge/TailwindCSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white"/> <img src="https://img.shields.io/badge/React_Query-FF4154?style=for-the-badge&logo=react-query&logoColor=white"/> <img src="https://img.shields.io/badge/pnpm-F69220?style=for-the-badge&logo=pnpm&logoColor=white"/> <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black"/> </p>
 
-First, run the development server:
+ # 주요 기능
+## 🔹 챔피언 목록 조회
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Riot API에서 제공하는 챔피언 데이터를 불러와 리스트로 출력합니다.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🔹 아이템 목록 조회
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+게임 내 아이템 정보를 표시하고, 아이템별 주요 속성을 확인할 수 있습니다.
+## 🔹 주간 무료 로테이션 챔피언 확인
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Riot API에서 주간 로테이션 챔피언 목록을 불러와 표시합니다.
+API 데이터를 가공하여 챔피언 이름과 이미지가 함께 출력됩니다.
 
-## Learn More
+## 배포 주소
 
-To learn more about Next.js, take a look at the following resources:
+https://vercel.com/redpome98s-projects/lol-champ-info/7FjWNEiTzmduNcGqAzA5i8sFf6vz
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+![image](https://github.com/user-attachments/assets/ca1feecc-788f-410d-9b32-19d14a22b977)
