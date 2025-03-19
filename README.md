@@ -16,3 +16,8 @@ Riot API에서 제공하는 챔피언 데이터를 불러와 리스트로 출력
 Riot API에서 주간 로테이션 챔피언 목록을 불러와 표시합니다.
 API 데이터를 가공하여 챔피언 이름과 이미지가 함께 출력됩니다.
 
+## 배포 주소
+
+https://vercel.com/redpome98s-projects/lol-champ-info/7FjWNEiTzmduNcGqAzA5i8sFf6vz
+
+![image](https://github.com/user-attachments/assets/ca1feecc-788f-410d-9b32-19d14a22b977)
