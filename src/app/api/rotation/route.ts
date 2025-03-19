@@ -16,7 +16,7 @@ export async function GET() {
 
   const championData = await fetchChampionListData();
   let rotationData = await rotationRes.json();
-  console.log(rotationData);
+
   rotationData = rotationData.freeChampionIds;
 
   const rotationChampions = rotationData.map((championId: number) =>

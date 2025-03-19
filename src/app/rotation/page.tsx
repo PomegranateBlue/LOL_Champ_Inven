@@ -5,7 +5,7 @@ import { getChampionRotation } from "@/utils/riotApi";
 import { Champion } from "@/types/championType";
 import ChampionCard from "@/components/ChampionCard";
 import { Suspense } from "react";
-import Loading from "./loading";
+
 export default function RotationPage() {
   const {
     data: championRotation,
@@ -21,7 +21,7 @@ export default function RotationPage() {
   return (
     <div className="container mx-auto p-4">
       <div className="text-3xl font-bold text-center mb-8">로테이션 챔피언</div>
-      <Suspense fallback={<Loading />}>
+      <Suspense fallback={<p>챔피언 리스트 로딩...</p>}>
         <div className="grid grid-cols-6  gap-2">
           {championRotation?.map((champion) => (
             <ChampionCard champion={champion} key={champion.id} />

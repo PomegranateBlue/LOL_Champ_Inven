@@ -9,7 +9,9 @@ const ITEM_API_URL =
 
 const ONE_DAY_TO_SECONDS = 86400;
 
+
 export async function fetchChampionListData(): Promise<Champion[]> {
+
   const response = await fetch(CHAMPION_API_URL, {
     next: { revalidate: ONE_DAY_TO_SECONDS },
   });
@@ -21,6 +23,7 @@ export async function fetchChampionListData(): Promise<Champion[]> {
   const { data }: { data: Record<string, Champion> } = await response.json();
   return Object.values(data);
 }
+
 export async function fetchChampionDetailData(
   id: string
 ): Promise<ChampionDetail> {
