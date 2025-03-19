@@ -2,6 +2,7 @@ import { RIOT_URL } from "@/constants/apiURL";
 import { fetchChampionListData } from "@/utils/serverApi";
 import { NextResponse } from "next/server";
 
+//GET 요청 처리하는 API 핸들러
 export async function GET() {
   const rotationRes = await fetch(`${RIOT_URL.ROTATION_CHAMPIONS}`, {
     headers: {

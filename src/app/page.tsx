@@ -21,7 +21,6 @@ const cards = [
 ];
 
 export default function HomePage() {
-
   return (
     <div className="flex flex-col justify-center items-center mt-20">
       <h1 className="text-4xl text-red-500 font-bold">리그 오브 레전드 정보</h1>
@@ -30,9 +29,9 @@ export default function HomePage() {
       </p>
 
       <div className="flex justify-around gap-x-20 mt-20">
-        {cards.map((card, index) => (
+        {cards.map((card) => (
           <Card
-            key={index}
+            key={card.href}
             src={card.src}
             alt={card.alt}
             text={card.text}

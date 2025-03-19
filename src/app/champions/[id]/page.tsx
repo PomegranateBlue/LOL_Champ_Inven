@@ -7,7 +7,7 @@ import Image from "next/image";
 interface ChampionIdParams {
   params: { id: string };
 }
-
+//id를 통해 조회한 챔피언 개별 카드들의 디테일 페이지
 export default async function ChampionDetailPage({ params }: ChampionIdParams) {
   const { id } = params;
   const championDetailData: ChampionDetail = await fetchChampionDetailData(id);

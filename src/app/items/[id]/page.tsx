@@ -7,6 +7,7 @@ type Props = {
   };
 };
 
+//개별 아이템 디테일 페이지
 export default async function ItemDetailPage({ params }: Props) {
   const items: [string, Item][] = await fetchItemsListData();
   const item = items.find((item) => {
